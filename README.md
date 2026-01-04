@@ -45,6 +45,6 @@ This study confirms the utility of the AutoDock Vina protocol for early-stage sc
 
 ## **Repository Structure**
 * `/PDB_files`: Original .pdb files.
-* `/PDBQT_files`: Vina input files.
+* `/PDBQT_files`: Vina input files. (upon request).
 * `/Ligand-protein interactions`: PyMOL screenshots.
-* `5dockedresults.csv`: Scoring table.
+* `5dockedresults.csv`: Scoring table. (upon reqest).
