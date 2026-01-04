@@ -10,15 +10,12 @@ The Dopamine Transporter (DAT) is a critical protein for regulating neurotransmi
 The project followed a standardized 8-step molecular docking protocol:
 1. **Ligand Selection:** Retrieved 5 inhibitors from ChEMBL (Active: Maralixibat, Ertugliflozin, Dapagliflozin; Inactive: Levodopa, Desvenlafaxine).
 2. **Protein Preparation:** Selected **7OUZ** (Active state, 0.90 Å resolution) from the Protein Data Bank (PDB).
-3. **Format Conversion:** Converted `.pdb` files to `.pdbqt` format, incorporating partial charges and atom types.
-4. **Search Space Definition:** * **Center:** x: 7.35, y: 14.42, z: 24.70
-   * **Dimensions:** 57.89, 48.60, 57.99
-5. **Docking Simulation:** Generated 9 poses per ligand with an exhaustiveness value of 50.
-6. **Interaction Profiling:** Analyzed hydrogen bonding and polar contacts using PyMOL.
+3. **Format Conversion:** Converted `.pdb` files to `.pdbqt` format for Vina.
+4. **Search Space Definition:** - **Center:** x: 7.35, y: 14.42, z: 24.70
+   - **Dimensions:** 57.89, 48.60, 57.99
+5. **Docking Simulation:** Generated poses with an exhaustiveness of 50.
 
 ## **Key Results**
-The docking results demonstrate a clear correlation between lower binding affinity (higher potency) and high experimental $pIC_{50}$ values.
-
 | Ligand | Activity | IC50 (nM) | $pIC_{50}$ | Binding Affinity (kcal/mol) |
 | :--- | :--- | :--- | :--- | :--- |
 | **MARALIXIBAT** | Active | 0.28 | 9.552 | **-9.0** |
@@ -27,33 +24,47 @@ The docking results demonstrate a clear correlation between lower binding affini
 | **LEVODOPA** | Inactive | 141,200,000 | 0.850 | **-6.0** |
 | **ERTUGLIFLOZIN** | Active | 0.87 | 9.060 | **-5.2** |
 
-*(Data compiled from 5dockedresults.csv and ChEMBL data)*
+*(Data compiled from 5dockedresults.csv and ChEMBL data).*
 
 ## **Interaction Visualizations**
 
-### **1. Maralixibat (Lead Candidate)**
-Maralixibat demonstrated the highest affinity (-9.0 kcal/mol) and stable orientation within the binding site, forming significant polar contacts.
-![Maralixibat Interaction](./Ligand-protein%20interactions/maralixibat-7ouz-pymol.png)
+### **1. MARALIXIBAT (Lead Candidate)**
+Maralixibat demonstrated the highest affinity and stable orientation within the binding site.
+| Interaction Profile | Binding Orientation |
+| :---: | :---: |
+| ![Maralixibat 1](./Ligand-protein%20interactions/MARALIXIBAT.png) | ![Maralixibat 2](./Ligand-protein%20interactions/maralixibat-7ouz-pymol.png) |
 
-### **2. Active Inhibitor: Dapagliflozin**
-Demonstrated high binding affinity (-8.8 kcal/mol) correlating with its biological activity.
-![Dapagliflozin Interaction](./Ligand-protein%20interactions/dapagliflozin-7ouz-pymol.png)
+### **2. DAPAGLIFLOZIN (Active)**
+Dapagliflozin shows high binding affinity (-8.8 kcal/mol) with strong polar interactions.
+| Polar Contacts | Structural Pose |
+| :---: | :---: |
+| ![Dapagliflozin 1](./Ligand-protein%20interactions/dapagliflozin.png) | ![Dapagliflozin 2](./Ligand-protein%20interactions/dapagliflozin-7ouz-pymol.png) |
 
-### **3. Inactive Control: Levodopa**
-Lower affinity and distinct orientation indicate weaker inhibition potential compared to active leads.
-![Levodopa Interaction](./Ligand-protein%20interactions/levodopa-7ouz-pymol.png)
+### **3. ERTUGLIFLOZIN (Active)**
+Despite high $pIC_{50}$, the docking affinity was -5.2 kcal/mol, suggesting a specific binding mode.
+| Interaction Profile | Binding Orientation |
+| :---: | :---: |
+| ![Ertugliflozin 1](./Ligand-protein%20interactions/ertugliflozin.png) | ![Ertugliflozin 2](./Ligand-protein%20interactions/ertugliflozin-7ouz-pymol.png) |
+
+### **4. LEVODOPA (Inactive Control)**
+Three distinct views showing the weak binding orientation and lack of typical active-site polar contacts.
+| View 1 (Profile) | View 2 (Pose) | View 3 (Details) |
+| :---: | :---: | :---: |
+| ![Levodopa 1](./Ligand-protein%20interactions/LEVODOPA1.png) | ![Levodopa 2](./Ligand-protein%20interactions/LEVODOPA2.png) | ![Levodopa 3](./Ligand-protein%20interactions/levodopa-7ouz-pymol.png) |
+
+### **5. DESVENLAFAXINE (Inactive Control)**
+![Desvenlafaxine](./Ligand-protein%20interactions/desvenlafzxine-7ouz-pymol.png)
 
 ## **Conclusion**
-This study successfully validated the binding modes of DAT inhibitors using an *in silico* approach. **Maralixibat** emerged as the most suitable inhibitor candidate, characterized by robust interactions with the protein active site. The alignment between computational docking scores and experimental $pIC_{50}$ values confirms the reliability of this workflow for screening prospective drug candidates.
+This study successfully validated the binding modes of DAT inhibitors. **Maralixibat** emerged as the most suitable inhibitor candidate due to its robust interaction profile. The correlation between computational docking scores and experimental $pIC_{50}$ confirms the reliability of this *in silico* workflow.
 
 ## **Software & Tools**
-* **PyRx (AutoDock Vina):** Molecular docking and scoring.
-* **PyMOL:** 3D Visualization and interaction mapping.
-* **ChEMBL Database:** Source of ligand bioactivity data.
-* **Protein Data Bank (7OUZ):** Protein structure source.
+* **PyRx (AutoDock Vina):** Docking and scoring.
+* **PyMOL:** Visualization and interaction mapping.
+* **ChEMBL Database:** Bioactivity data.
 
 ## **Repository Structure**
-* `/PDB_files`: Original protein and ligand structures.
-* `/PDBQT_files`: Input files converted for AutoDock Vina.
-* `/Ligand-protein interactions`: PyMOL interaction diagrams.
-* `5dockedresults.csv`: Complete docking score table.
+* `/PDB_files`: Original .pdb files.
+* `/PDBQT_files`: Vina input files.
+* `/Ligand-protein interactions`: PyMOL screenshots.
+* `5dockedresults.csv`: Scoring table.
