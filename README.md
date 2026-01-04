@@ -32,25 +32,24 @@ The project followed a standardized 8-step molecular docking protocol:
 Maralixibat demonstrated the highest affinity and stable orientation within the binding site.
 | Interaction Profile | Binding Orientation |
 | :---: | :---: |
-| ![Maralixibat 1](./Ligand-protein%20interactions/MARALIXIBAT.png) | ![Maralixibat 2](./Ligand-protein%20interactions/maralixibat-7ouz-pymol.png) |
-
+|![Maralixibat 2](./Ligand-protein%20interactions/maralixibat-7ouz-pymol.png) | ![Maralixibat 1](./Ligand-protein%20interactions/MARALIXIBAT.png) |
 ### **2. DAPAGLIFLOZIN (Active)**
 Dapagliflozin shows high binding affinity (-8.8 kcal/mol) with strong polar interactions.
 | Polar Contacts | Structural Pose |
 | :---: | :---: |
-| ![Dapagliflozin 1](./Ligand-protein%20interactions/dapagliflozin.png) | ![Dapagliflozin 2](./Ligand-protein%20interactions/dapagliflozin-7ouz-pymol.png) |
+| ![Dapagliflozin 2](./Ligand-protein%20interactions/dapagliflozin-7ouz-pymol.png) | ![Dapagliflozin 1](./Ligand-protein%20interactions/dapagliflozin.png) | 
 
 ### **3. ERTUGLIFLOZIN (Active)**
 Despite high $pIC_{50}$, the docking affinity was -5.2 kcal/mol, suggesting a specific binding mode.
 | Interaction Profile | Binding Orientation |
 | :---: | :---: |
-| ![Ertugliflozin 1](./Ligand-protein%20interactions/ertugliflozin.png) | ![Ertugliflozin 2](./Ligand-protein%20interactions/ertugliflozin-7ouz-pymol.png) |
+| ![Ertugliflozin 2](./Ligand-protein%20interactions/ertugliflozin-7ouz-pymol.png) | ![Ertugliflozin 1](./Ligand-protein%20interactions/ertugliflozin.png) | 
 
 ### **4. LEVODOPA (Inactive Control)**
 Three distinct views showing the weak binding orientation and lack of typical active-site polar contacts.
 | View 1 (Profile) | View 2 (Pose) | View 3 (Details) |
 | :---: | :---: | :---: |
-| ![Levodopa 1](./Ligand-protein%20interactions/LEVODOPA1.png) | ![Levodopa 2](./Ligand-protein%20interactions/LEVODOPA2.png) | ![Levodopa 3](./Ligand-protein%20interactions/levodopa-7ouz-pymol.png) |
+| ![Levodopa 3](./Ligand-protein%20interactions/levodopa-7ouz-pymol.png) | ![Levodopa 1](./Ligand-protein%20interactions/LEVODOPA1.png) | ![Levodopa 2](./Ligand-protein%20interactions/LEVODOPA2.png) | 
 
 ### **5. DESVENLAFAXINE (Inactive Control)**
 ![Desvenlafaxine](./Ligand-protein%20interactions/desvenlafzxine-7ouz-pymol.png)
