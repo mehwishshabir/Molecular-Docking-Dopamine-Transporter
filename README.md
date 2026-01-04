@@ -9,11 +9,9 @@ The Dopamine Transporter (DAT) is a critical protein for regulating neurotransmi
 ## **Methodology**
 The project followed a standardized molecular docking protocol:
 1. **Target Selection:** Human DAT crystal structure **7OUZ** (Active state, 0.90 Å resolution) selected from the Protein Data Bank (PDB)..
-2. **Ligand Selection:** Retrieved 5 inhibitors from ChEMBL (Active: Maralixibat, Ertugliflozin, Dapagliflozin; Inactive: Levodopa, Desvenlafaxine).
-3. 4. **Structure Optimization:** Conversion of PDB coordinates into AutoDock Vina-compatible `.pdbqt` format, including partial charge (Q) assignment and atom type (T) identification.
+2. **Ligand Selection:** Retrieved 5 inhibitors from ChEMBL Database. 
+3. **Structure Optimization:** Conversion of PDB coordinates into AutoDock Vina-compatible `.pdbqt` format, including partial charge (Q) assignment and atom type (T) identification.
 4. **Site-Directed Search:** Definition of the Vina search space based on known active site residues.
-   **Center:** x: 7.35, y: 14.42, z: 24.70
-   **Dimensions:** 57.89, 48.60, 57.99.
 5. **Docking Simulation:** Exhaustive docking runs (Exhaustiveness: 50) to generate potential binding poses.
 6. **Post-Docking Analysis:** Scoring and RMSD evaluation of generated poses.
 
