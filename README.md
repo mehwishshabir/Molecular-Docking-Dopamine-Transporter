@@ -56,7 +56,14 @@ Three distinct views showing the weak binding orientation and lack of typical ac
 | ![Desvenlafaxine](./Ligand-protein%20interactions/desvenlafzxine-7ouz-pymol.png) |
 
 ## **Conclusion**
-This study successfully validated the binding modes of DAT inhibitors. **Maralixibat** emerged as the most suitable inhibitor candidate due to its robust interaction profile. The correlation between computational docking scores and experimental $pIC_{50}$ confirms the reliability of this *in silico* workflow.
+This study successfully validated the binding modes of DAT inhibitors through a comparative *in silico* workflow. While all active ligands showed favorable docking scores, **Maralixibat (CHEMBL363392)** emerged as the most suitable inhibitor candidate for the following reasons:
+
+* **Superior Binding Affinity:** It consistently demonstrated the strongest binding affinity (-9.0 kcal/mol), correlating with its high experimental $pIC_{50}$ (9.552).
+* **Interaction Patterns:** The ligand exhibited robust polar interactions within the protein's active site, which are critical for stable complex formation.
+* **Structural Feasibility:** Evaluation of its binding mode and orientation suggests a high degree of fit and specificity for the 7OUZ active site.
+
+While Maralixibat stands out as a promising lead, further structural analysis and experimental validation are recommended to confirm its exact mechanism of action and specificity as a DAT inhibitor.
+
 
 ## **Software & Tools**
 * **PyRx (AutoDock Vina):** Docking and scoring.
